@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfaceExercise
 {
-    internal interface IVehicle
+    public interface IVehicle
     {
         public double EngineSize { get; set; }
         public string Make { get; set; }
@@ -17,7 +17,7 @@ namespace InterfaceExercise
         public void Drive();
         public void Reverse();
         public void Park();
-        public bool ChangeGears(bool v);
+        public void ChangeGears(bool isChanged);
        
     }
 

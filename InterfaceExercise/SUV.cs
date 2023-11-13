@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace InterfaceExercise
 {
-    public class Truck : IVehicle, ICompany
+    public class SUV : IVehicle, ICompany
     {
-        public Truck() { }
+        public SUV() { }
 
-        public double EngineSize { get; set; } = 6.0;
+        public double EngineSize { get; set; } = 8.0;
         public string Make { get; set; } = "Ford";
-        public string Model { get; set; } = "F150";
+        public string Model { get; set; } = "SUV";
         public int SeatCount { get; set; } = 2;
         public string CompanyName { get; set; } = "Frank's Ford Center";
         public string Motto { get; set; } = "Built Ford Tough";
@@ -23,19 +23,19 @@ namespace InterfaceExercise
         {
             if (HasFourWheelDrive == true)
             {
-                Console.WriteLine($"The 4 wheel drive {GetType().Name} is now driving forward!");
+                Console.WriteLine($"4 wheel drive {GetType().Name} now driving forward!");
             }
             else
             {
-                Console.WriteLine($"The 4 wheel drive {GetType().Name} is now driving forward!");
+                Console.WriteLine($"Truck {GetType().Name} now driving forward!");
             }
-          
+
         }
         public void Reverse()
         {
             if (HasChangedGears == true)
             {
-                Console.WriteLine($"The 4 wheel drive {GetType().Name} is now reversing!");
+                Console.WriteLine($"4 wheel drive {GetType().Name} now reversing!");
                 HasChangedGears= false;
             }
             else
@@ -65,7 +65,7 @@ namespace InterfaceExercise
             throw new NotImplementedException();
         }
 
-      
+
     }
 }
 
